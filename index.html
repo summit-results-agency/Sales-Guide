@@ -624,7 +624,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 @media(max-width:760px){.sales-modal{padding:10px}.sales-modal-panel{max-height:calc(100vh - 20px)}.sales-modal-head{padding:22px 18px 16px}.sales-modal-head h2{font-size:25px}.sales-modal-fields{grid-template-columns:1fr 1fr;padding:18px}.sales-modal-results{padding:22px 18px}.modal-result-grid{grid-template-columns:1fr 1fr}.modal-result-grid>div{border-right:1px solid #354056!important;border-bottom:1px solid #354056!important}.modal-result-grid>div:nth-child(2n){border-right:0!important}.modal-result-grid>div:nth-last-child(-n+2){border-bottom:0!important}}
 @media(max-width:460px){.sales-modal-fields,.modal-result-grid{grid-template-columns:1fr}.modal-result-grid>div{border-right:0!important}.modal-result-grid>div:nth-last-child(2){border-bottom:1px solid #354056!important}.modal-primary strong{font-size:36px}}
 
-.report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:14px}.report-grid label,.report-wide{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px;margin-bottom:14px}.report-grid input,.report-wide textarea{border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;width:100%;background:#fff;color:var(--text)}.report-grid input:focus,.report-wide textarea:focus{outline:2px solid var(--blue);outline-offset:1px}.report-help{font-size:13px;color:var(--muted)}.report-status{margin-top:12px;font-weight:700}.report-status.error{color:var(--red)}.report-status.success{color:var(--green)}@media(max-width:620px){.report-grid{grid-template-columns:1fr}}
+.report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:14px}.report-grid label,.report-wide{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px;margin-bottom:14px}.report-grid input,.report-grid select,.report-wide textarea{border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;width:100%;background:#fff;color:var(--text)}.report-grid input:focus,.report-grid select:focus,.report-wide textarea:focus{outline:2px solid var(--blue);outline-offset:1px}.report-help{font-size:13px;color:var(--muted)}.report-status{margin-top:12px;font-weight:700}.report-status.error{color:var(--red)}.report-status.success{color:var(--green)}@media(max-width:620px){.report-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -645,7 +645,7 @@ h3{font-size:17px;letter-spacing:-.025em}
     
     <nav class="sb-nav" id="navlist">
       <div class="sb-label">Sales Hub</div>
-      <button class="navlink" data-go="home"><span class="nav-ico">&#9632;</span> Home</button>
+      <button class="navlink active" data-go="home"><span class="nav-ico">&#9632;</span> Home</button>
 
       <div class="sb-label">Foundation</div>
       <button class="navlink" data-go="start"><span class="nav-ico">1</span> Start Here</button>
@@ -685,9 +685,9 @@ h3{font-size:17px;letter-spacing:-.025em}
     <main class="content" id="content">
 
     <!-- ================= HOME ================= -->
-    <section class="page" id="page-home">
-<div class="hero sales-hero"><div class="hero-inner"><div class="eyebrow" style="color:#F07A52">Summit Results Agency · Full-Cycle Sales</div><h1>Own the call. Own the close.</h1><p>Every rep is responsible for prospecting, discovery, demo, pricing, payment, follow-up, and onboarding. Keep the conversation moving and own the result.</p><div class="btnrow"><button class="btn" data-go="scripts">Open Full Sales Scripts</button><button class="btn ghost" data-go="activity">Submit Daily Activity</button></div></div></div>
-<div class="statrow"><div class="stat"><div class="stat-v">125+</div><div class="stat-l">Minimum outbound dials per working day</div></div><div class="stat"><div class="stat-v">3+</div><div class="stat-l">Minimum closed sales each week</div></div><div class="stat"><div class="stat-v">Daily</div><div class="stat-l">Activity report at the end of every working day</div></div><div class="stat"><div class="stat-v">Full cycle</div><div class="stat-l">Own prospects through payment and onboarding</div></div></div>
+    <section class="page active" id="page-home">
+<div class="hero sales-hero"><div class="hero-inner"><div class="eyebrow" style="color:#F07A52">Summit Results Agency · Full-Cycle Sales</div><h1>From first dial to live client.</h1><p>The guide for full-cycle sales: make the calls, understand the problem, show the solution, close, and help the client get started.</p><div class="btnrow"><button class="btn" data-go="scripts">Open Full Sales Scripts</button><button class="btn ghost" data-go="activity">Submit Daily Activity</button></div></div></div>
+<div class="statrow"><div class="stat"><div class="stat-v">125+</div><div class="stat-l">Minimum outbound dials per working day</div></div><div class="stat"><div class="stat-v">3+</div><div class="stat-l">Minimum closed sales each week</div></div><div class="stat"><div class="stat-v">Daily</div><div class="stat-l">Activity report at the end of every working day</div></div><div class="stat"><div class="stat-v">Full cycle</div><div class="stat-l">Handle the deal through onboarding</div></div></div>
 <div class="note warn"><strong>Non-negotiable standards:</strong> At least 125 outbound dials each working day, at least 3 closed sales each week, accurate CRM updates, and a completed daily activity report before finishing every working day. Communicate blockers early.</div>
 <h2>The full-cycle path</h2><div class="phase-grid"><button class="phase-card" data-go="scripts"><span class="phase-no">01</span><span class="phase-tag">Prospect</span><strong>Make the calls.</strong><p>Lead with missed and after-hours opportunities. Discover the real need.</p></button><button class="phase-card" data-go="scripts"><span class="phase-no">02</span><span class="phase-tag">Close</span><strong>Finish the sale.</strong><p>Show the demo, present the price, handle concerns, ask, and collect payment.</p></button><button class="phase-card" data-go="onboarding"><span class="phase-no">03</span><span class="phase-tag">Onboard</span><strong>Own the handoff.</strong><p>Send the form, confirm the next steps, and keep the CRM current.</p></button></div>
 <h2>Quick access</h2><div class="tiles"><button class="tile" data-go="process"><span class="tile-num">01</span><span class="tile-t">Sales Process</span><span class="tile-d">Cold call through onboarding.</span></button><button class="tile" data-go="scripts"><span class="tile-num">02</span><span class="tile-t">Full Call Scripts</span><span class="tile-d">Three complete sales conversations.</span></button><button class="tile" data-go="objections"><span class="tile-num">03</span><span class="tile-t">Objections</span><span class="tile-d">Address the real concern.</span></button><button class="tile" data-go="pricing"><span class="tile-num">04</span><span class="tile-t">Pricing &amp; Payment</span><span class="tile-d">Standard offers and checkout links.</span></button><button class="tile" data-go="followup"><span class="tile-num">05</span><span class="tile-t">Your Follow-Ups</span><span class="tile-d">Retain ownership of every deal.</span></button><button class="tile" data-go="activity"><span class="tile-num">06</span><span class="tile-t">Daily Activity Form</span><span class="tile-d">Submit before ending each workday.</span></button></div>
@@ -886,11 +886,11 @@ h3{font-size:17px;letter-spacing:-.025em}
       <h2>Discount rule</h2>
       <div class="discount-flow">
         <div><span>1</span><strong>Diagnose first</strong><p>Make sure price is truly the blocker and the product itself is a fit.</p></div>
-        <div><span>2</span><strong>Find the number</strong><p>Ask what price would actually make the decision work for them.</p></div>
-        <div><span>3</span><strong>Get commitment</strong><p>"If I can get $___ approved, would you move forward today?"</p></div>
-        <div><span>4</span><strong>Request approval</strong><p>Do not promise a nonstandard price until it is approved.</p></div>
+        <div><span>2</span><strong>Get an exact number</strong><p>"What monthly price would make this work for you?" Get a specific dollar amount, not just "something cheaper."</p></div>
+        <div><span>3</span><strong>Confirm the commitment</strong><p><strong>"If I can get $[exact amount] approved, are you ready to move forward today?"</strong> Wait for a clear yes before asking for an exception.</p></div>
+        <div><span>4</span><strong>Contact management</strong><p>Share their exact number and commitment. We may approve it, counteroffer, or keep the standard price. Do not promise a discount before approval.</p></div>
       </div>
-      <div class="note stop"><p style="margin-bottom:0"><strong>Never negotiate against yourself.</strong> A vague "maybe" is not a reason to discount. Get a clear conditional commitment first.</p></div>
+      <div class="note stop"><p style="margin-bottom:0"><strong>Never negotiate against yourself.</strong> Do not request a discount for someone who is only vaguely interested. Get the exact amount and a clear commitment to buy today if approved.</p></div>
       <div class="btnrow"><button class="btn" data-go="scripts">Next: Cold Call</button></div>
     </section>
 
@@ -908,7 +908,7 @@ h3{font-size:17px;letter-spacing:-.025em}
       
       <div class="tabpane active" id="tab-s1"><h2 style="margin-top:0">Direct Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Lead with missed and after-hours calls</div><div class="say">"The reason I'm calling is we're helping [Industry] businesses make sure customer calls don't get lost when everyone's busy or the office is closed. When someone calls during a job or in the evening, does it ever go unanswered or to voicemail?"</div><div class="cue">Lead with the problem, not the AI. Let them explain what happens.</div></div></div><div class="step"><div class="snum">3</div><div class="sbody">
           <div class="sh">Understand what happens now</div>
-          <div class="say">"About how many calls would you say that happens with on a normal day or week?"</div>
+          <div class="say">"Roughly how many calls would you say you miss on a normal day or week?"</div>
           <div class="say">"And what usually happens with those callers after that? Do they leave a voicemail, call back, or is it kind of hit or miss?"</div>
           <div class="say">"Who normally handles the phone when you guys are available?"</div>
           <div class="cue">If they say they almost never miss calls, explore after-hours or busy periods once. If there is no real problem, do not force one.</div>
@@ -970,9 +970,14 @@ h3{font-size:17px;letter-spacing:-.025em}
           <div class="say alt">"No problem. Let's put 15 minutes on my calendar when you have more time and we'll pick it back up there."</div>
           <div class="cue">Schedule your own follow-up. Keep the follow-up yourself and own the close.</div>
         </div></div></div>
-<div class="tabpane" id="tab-s2"><h2 style="margin-top:0">Permission-Based Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Ask permission for 30 seconds</div><div class="say">"I'll be upfront, this is a cold call. We're working with [Industry] businesses to stop customer opportunities slipping through missed and after-hours calls. Have you got 30 seconds for why I reached out?"</div><div class="cue">If yes, give the reason before asking your first discovery question.</div><div class="say">"Thanks. A lot of good customers call while the team is out working or after closing, then move on if nobody answers. We're helping businesses capture those calls instead of losing the opportunity. When your phones get busy or it gets into the evening, what happens to incoming calls?"</div><div class="cue">If no, respect it. Ask for a better time only if they are open to it.</div></div></div><div class="step"><div class="snum">3</div><div class="sbody">
+<div class="tabpane" id="tab-s2"><h2 style="margin-top:0">Permission-Based Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Ask for 30 seconds</div>
+<div class="say">"I'll be honest, this is a cold call. We're helping [Industry] businesses catch customer calls they might miss when they're busy or closed. Do you have 30 seconds?"</div>
+<div class="cue">Pause for their answer. If they say yes, keep it short and conversational.</div>
+<div class="say">"Perfect, appreciate it. We help make sure calls don't just go to voicemail when you're on a job or it's after hours. Do you guys ever run into that, where you can't get to the phone?"</div>
+<div class="cue">Let them answer. If yes, ask roughly how many calls they miss per day or week. Then ask what happens to those callers. If no, briefly check evenings or weekends once and move on if there's no need.</div></div></div>
+<div class="step"><div class="snum">3</div><div class="sbody">
           <div class="sh">Understand what happens now</div>
-          <div class="say">"About how many calls would you say that happens with on a normal day or week?"</div>
+          <div class="say">"Roughly how many calls would you say you miss on a normal day or week?"</div>
           <div class="say">"And what usually happens with those callers after that? Do they leave a voicemail, call back, or is it kind of hit or miss?"</div>
           <div class="say">"Who normally handles the phone when you guys are available?"</div>
           <div class="cue">If they say they almost never miss calls, explore after-hours or busy periods once. If there is no real problem, do not force one.</div>
@@ -1036,7 +1041,7 @@ h3{font-size:17px;letter-spacing:-.025em}
         </div></div></div>
 <div class="tabpane" id="tab-s3"><h2 style="margin-top:0">Missed-Call Audit Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Offer a quick missed-call check</div><div class="say">"I'm reaching out because we're helping [Industry] businesses spot revenue that can slip through when calls come in during busy hours, evenings, and weekends. Could I ask you one quick question to see whether that's relevant?"</div><div class="cue">Wait for agreement, then explain the situation before asking.</div><div class="say">"When someone calls after hours or while everyone is tied up, the caller often moves on instead of leaving a message. We're looking at whether that's happening for local businesses. What usually happens to those calls at your company?"</div></div></div><div class="step"><div class="snum">3</div><div class="sbody">
           <div class="sh">Understand what happens now</div>
-          <div class="say">"About how many calls would you say that happens with on a normal day or week?"</div>
+          <div class="say">"Roughly how many calls would you say you miss on a normal day or week?"</div>
           <div class="say">"And what usually happens with those callers after that? Do they leave a voicemail, call back, or is it kind of hit or miss?"</div>
           <div class="say">"Who normally handles the phone when you guys are available?"</div>
           <div class="cue">If they say they almost never miss calls, explore after-hours or busy periods once. If there is no real problem, do not force one.</div>
@@ -1155,8 +1160,8 @@ h3{font-size:17px;letter-spacing:-.025em}
 
       <h2>When price is the only blocker</h2>
       <div class="note good">
-        <p>Do the value work first. If they genuinely want the product and the only thing stopping the sale is price, find the number that changes the decision.</p>
-        <p style="margin-bottom:0"><strong>"If I can get $___ approved, will you move forward today?"</strong> Get the commitment before requesting approval. Do not promise the discount yourself unless you have explicit authority.</p>
+        <p>Handle the objection and establish value first. If price is genuinely the only issue, ask for the <strong>exact monthly amount</strong> they would accept.</p>
+        <p><strong>"If I can get $[exact amount] approved, will you move forward today?"</strong> Confirm a clear yes, then contact management with the exact amount and their commitment.</p><p style="margin-bottom:0">Management may approve, counter, or decline. Keep the conversation with the prospect and never promise unapproved pricing.</p>
       </div>
 
       <div class="note stop"><p style="margin-bottom:0"><strong>Know when to stop.</strong> Objection handling is for real opportunities with a solvable concern. It is not a contest to argue an uninterested person into submission.</p></div>
@@ -1251,14 +1256,14 @@ h3{font-size:17px;letter-spacing:-.025em}
     <!-- ================= EXPECTATIONS ================= -->
     <section class="page" id="page-expectations"><div class="eyebrow">Performance</div><h1>Daily Standards</h1><p class="lead">Full-cycle means you own your pipeline and your results. Consistency and communication are required, not optional.</p>
 <div class="statrow"><div class="stat"><div class="stat-v">125</div><div class="stat-l">Minimum outbound dials per working day</div></div><div class="stat"><div class="stat-v">3</div><div class="stat-l">Minimum closed sales per week</div></div><div class="stat"><div class="stat-v">Every day</div><div class="stat-l">Activity report submitted by end of each working day</div></div><div class="stat"><div class="stat-v">100%</div><div class="stat-l">CRM notes and follow-ups owned</div></div></div>
-<div class="card"><h2>Daily operating checklist</h2><ul><li>Make at least <strong>125 outbound dials</strong> during each working day.</li><li>Keep the conversation moving through discovery, live demo, price, objections, and close.</li><li>Keep every active prospect's CRM record and next step current.</li><li>Follow up on your own deals at the agreed time.</li><li>Communicate blockers or schedule changes promptly. Do not go silent.</li><li><strong>Submit the Daily Activity Form at the end of every working day.</strong> Report actual results, even when you miss the target.</li></ul><button class="btn" data-go="activity">Complete Daily Report</button></div>
+<div class="card"><h2>Daily operating checklist</h2><ul><li>Make at least <strong>125 outbound dials</strong> during each working day.</li><li>Work through discovery, demo, pricing, objections, and close in the same conversation whenever possible.</li><li>Keep every active prospect's CRM record and next step current.</li><li>Follow up on your own deals at the agreed time.</li><li>Communicate blockers or schedule changes promptly. Do not go silent.</li><li><strong>Submit the Daily Activity Form at the end of every working day.</strong> Report actual results, even when you miss the target.</li></ul><button class="btn" data-go="activity">Complete Daily Report</button></div>
 <div class="note warn"><strong>Minimum weekly result: 3 closed sales.</strong> Track your progress throughout the week. If you're behind, raise the issue early and identify what you will change.</div><button class="btn ghost" data-go="home">Back to Home</button></section>
 <section class="page" id="page-activity"><div class="eyebrow">Daily accountability</div><h1>Daily Activity Report</h1><p class="lead">Submit this at the end of <strong>every working day</strong>, even if the day fell below target. Be accurate and specific. Your daily minimum is 125 dials; your weekly minimum is 3 closed sales.</p>
 <div class="card"><form id="daily-activity-form">
 <div class="report-grid"><label>Full name <input name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Your full name"></label><label>Work date <input name="date" type="date" required></label>
-<label>Shift start <input name="shift_start" type="time" required></label><label>Shift end <input name="shift_end" type="time" required></label>
+<label>Shift start <select name="shift_start" required><option value="" selected disabled>Select time</option><option value="00:00">12:00 AM</option><option value="00:30">12:30 AM</option><option value="01:00">1:00 AM</option><option value="01:30">1:30 AM</option><option value="02:00">2:00 AM</option><option value="02:30">2:30 AM</option><option value="03:00">3:00 AM</option><option value="03:30">3:30 AM</option><option value="04:00">4:00 AM</option><option value="04:30">4:30 AM</option><option value="05:00">5:00 AM</option><option value="05:30">5:30 AM</option><option value="06:00">6:00 AM</option><option value="06:30">6:30 AM</option><option value="07:00">7:00 AM</option><option value="07:30">7:30 AM</option><option value="08:00">8:00 AM</option><option value="08:30">8:30 AM</option><option value="09:00">9:00 AM</option><option value="09:30">9:30 AM</option><option value="10:00">10:00 AM</option><option value="10:30">10:30 AM</option><option value="11:00">11:00 AM</option><option value="11:30">11:30 AM</option><option value="12:00">12:00 PM</option><option value="12:30">12:30 PM</option><option value="13:00">1:00 PM</option><option value="13:30">1:30 PM</option><option value="14:00">2:00 PM</option><option value="14:30">2:30 PM</option><option value="15:00">3:00 PM</option><option value="15:30">3:30 PM</option><option value="16:00">4:00 PM</option><option value="16:30">4:30 PM</option><option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option><option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option><option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option><option value="20:00">8:00 PM</option><option value="20:30">8:30 PM</option><option value="21:00">9:00 PM</option><option value="21:30">9:30 PM</option><option value="22:00">10:00 PM</option><option value="22:30">10:30 PM</option><option value="23:00">11:00 PM</option><option value="23:30">11:30 PM</option></select></label><label>Shift end <select name="shift_end" required><option value="" selected disabled>Select time</option><option value="00:00">12:00 AM</option><option value="00:30">12:30 AM</option><option value="01:00">1:00 AM</option><option value="01:30">1:30 AM</option><option value="02:00">2:00 AM</option><option value="02:30">2:30 AM</option><option value="03:00">3:00 AM</option><option value="03:30">3:30 AM</option><option value="04:00">4:00 AM</option><option value="04:30">4:30 AM</option><option value="05:00">5:00 AM</option><option value="05:30">5:30 AM</option><option value="06:00">6:00 AM</option><option value="06:30">6:30 AM</option><option value="07:00">7:00 AM</option><option value="07:30">7:30 AM</option><option value="08:00">8:00 AM</option><option value="08:30">8:30 AM</option><option value="09:00">9:00 AM</option><option value="09:30">9:30 AM</option><option value="10:00">10:00 AM</option><option value="10:30">10:30 AM</option><option value="11:00">11:00 AM</option><option value="11:30">11:30 AM</option><option value="12:00">12:00 PM</option><option value="12:30">12:30 PM</option><option value="13:00">1:00 PM</option><option value="13:30">1:30 PM</option><option value="14:00">2:00 PM</option><option value="14:30">2:30 PM</option><option value="15:00">3:00 PM</option><option value="15:30">3:30 PM</option><option value="16:00">4:00 PM</option><option value="16:30">4:30 PM</option><option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option><option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option><option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option><option value="20:00">8:00 PM</option><option value="20:30">8:30 PM</option><option value="21:00">9:00 PM</option><option value="21:30">9:30 PM</option><option value="22:00">10:00 PM</option><option value="22:30">10:30 PM</option><option value="23:00">11:00 PM</option><option value="23:30">11:30 PM</option></select></label>
 <label>Outbound calls made <input name="calls" type="number" min="0" step="1" required placeholder="125"></label><label>Appointments booked <input name="appointments" type="number" min="0" step="1" required placeholder="0"></label><label>Sales closed <input name="sales" type="number" min="0" step="1" required placeholder="0"></label></div>
-<p class="report-help">Example shift: 9:00 AM to 5:00 PM. If your shift crosses midnight, enter the actual start and end times.</p>
+<p class="report-help">If your shift crosses midnight, enter the actual start and end times.</p>
 <label class="report-wide">Main objection you encountered<textarea name="main_objection" rows="3" required maxlength="2000" placeholder="What concern came up most, and how did you respond?"></textarea></label>
 <label class="report-wide">What did you do well today?<textarea name="did_well" rows="3" required maxlength="2000" placeholder="Be specific about calls, conversations, and follow-through."></textarea></label>
 <label class="report-wide">What do you want to improve?<textarea name="improve" rows="3" required maxlength="2000" placeholder="What will you do differently tomorrow?"></textarea></label>
@@ -1446,38 +1451,7 @@ h3{font-size:17px;letter-spacing:-.025em}
   [scriptCalls,scriptPeriod,scriptTicket,scriptRate].forEach(function(el){if(el){el.addEventListener('input',updateScriptRoi);el.addEventListener('change',updateScriptRoi);}});
   updateScriptRoi();
 
-// Calculator uses the prospect's own inputs; figures are estimates of gross revenue.
-  var roiCalls = document.getElementById('roi-calls');
-  var roiPeriod = document.getElementById('roi-period');
-  var roiTicket = document.getElementById('roi-ticket');
-  var roiError = document.getElementById('roi-error');
-  var roiPrompt = document.getElementById('roi-prompt');
-  var dollars = new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
-  var quantity = new Intl.NumberFormat('en-US',{maximumFractionDigits:1});
-  function setRoi(id,value){ document.getElementById(id).textContent=value; }
-  function updateRoi(){
-    var hasCalls = roiCalls.value !== '', hasTicket = roiTicket.value !== '';
-    var calls = Number(roiCalls.value), ticket = Number(roiTicket.value);
-    var valid = hasCalls && hasTicket && Number.isFinite(calls) && Number.isFinite(ticket) && calls >= 0 && ticket > 0;
-    roiPrompt.hidden = hasCalls || hasTicket;
-    roiError.hidden = valid || (!hasCalls && !hasTicket);
-    if(!valid){
-      ['roi-monthly','roi-customers','roi-revenue','roi-multiple','roi-breakeven'].forEach(function(id){setRoi(id,'—');});
-      return;
-    }
-    var factor = roiPeriod.value === 'day' ? 30 : roiPeriod.value === 'week' ? 52/12 : 1;
-    var monthly = calls * factor;
-    var lowCustomers = monthly * .20, highCustomers = monthly * .30;
-    var lowRevenue = lowCustomers * ticket, highRevenue = highCustomers * ticket;
-    var breakEven = Math.ceil(397 / ticket);
-    setRoi('roi-monthly',quantity.format(monthly));
-    setRoi('roi-customers',quantity.format(lowCustomers)+'–'+quantity.format(highCustomers));
-    setRoi('roi-revenue',dollars.format(lowRevenue)+'–'+dollars.format(highRevenue));
-    setRoi('roi-multiple','~'+Math.floor(lowRevenue/397)+'–'+Math.ceil(highRevenue/397)+'×');
-    setRoi('roi-breakeven',breakEven+' additional '+(breakEven===1?'customer':'customers')+' at '+dollars.format(ticket)+' each would cover the $397 monthly fee in gross sales. Further sales add gross revenue before service costs.');
-  }
-  [roiCalls,roiPeriod,roiTicket].forEach(function(el){ el.addEventListener('input',updateRoi); el.addEventListener('change',updateRoi); });
-  updateRoi();
+
 
   show((location.hash||'#home').slice(1), false);
 })();
