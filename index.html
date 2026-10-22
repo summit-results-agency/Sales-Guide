@@ -626,6 +626,15 @@ h3{font-size:17px;letter-spacing:-.025em}
 
 .report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:14px}.report-grid label,.report-wide{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px;margin-bottom:14px}.report-grid input,.report-grid select,.report-wide textarea{border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;width:100%;background:#fff;color:var(--text)}.report-grid input:focus,.report-grid select:focus,.report-wide textarea:focus{outline:2px solid var(--blue);outline-offset:1px}.report-help{font-size:13px;color:var(--muted)}.report-status{margin-top:12px;font-weight:700}.report-status.error{color:var(--red)}.report-status.success{color:var(--green)}@media(max-width:620px){.report-grid{grid-template-columns:1fr}}
 #low-dials-reason-wrap[hidden]{display:none!important}
+
+/* Daily report confirmation */
+.report-confirm-overlay[hidden]{display:none!important}
+.report-confirm-overlay{position:fixed;inset:0;z-index:210;background:rgba(6,11,20,.64);display:flex;align-items:center;justify-content:center;padding:20px}
+.report-confirm-card{width:100%;max-width:420px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 80px rgba(6,11,20,.28);padding:30px;text-align:center}
+.report-confirm-icon{width:58px;height:58px;background:#E9FAF2;color:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:30px;font-weight:800}
+.report-confirm-card h2{margin:0 0 7px;font-size:23px}
+.report-confirm-card p{color:var(--muted);margin:0 0 23px}
+.report-confirm-card .btn{width:100%}
 </style>
 </head>
 <body>
@@ -1314,6 +1323,14 @@ h3{font-size:17px;letter-spacing:-.025em}
   </div>
 </div>
 
+<div class="report-confirm-overlay" id="report-confirm-overlay" hidden>
+  <div class="report-confirm-card" role="dialog" aria-modal="true" aria-labelledby="report-confirm-title" aria-describedby="report-confirm-description">
+    <div class="report-confirm-icon" aria-hidden="true">&#10003;</div>
+    <h2 id="report-confirm-title">Report submitted!</h2>
+    <p id="report-confirm-description">Your daily activity report has been sent.</p>
+    <button class="btn" type="button" id="report-confirm-close">Done</button>
+  </div>
+</div>
 <script>
 (function(){
   var pages = ["home","start","process","product","pricing","scripts","objections","followup","onboarding","expectations","activity"];
@@ -1375,6 +1392,22 @@ h3{font-size:17px;letter-spacing:-.025em}
   window.addEventListener('hashchange', function(){ show((location.hash||'#home').slice(1), false); });
   window.addEventListener('popstate', function(){ show((location.hash||'#home').slice(1), false); });
 
+  var reportConfirm=document.getElementById('report-confirm-overlay');
+  var reportConfirmClose=document.getElementById('report-confirm-close');
+  var reportConfirmPreviousFocus=null;
+  function closeReportConfirmation(){
+    reportConfirm.hidden=true;
+    if(reportConfirmPreviousFocus&&reportConfirmPreviousFocus.focus)reportConfirmPreviousFocus.focus();
+  }
+  function showReportConfirmation(){
+    reportConfirmPreviousFocus=document.activeElement;
+    reportConfirm.hidden=false;
+    reportConfirmClose.focus();
+  }
+  reportConfirmClose.addEventListener('click',closeReportConfirmation);
+  reportConfirm.addEventListener('click',function(e){if(e.target===reportConfirm)closeReportConfirmation();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!reportConfirm.hidden)closeReportConfirmation();});
+
   // End-of-day activity report. URL-encoded POST avoids a cross-origin preflight.
   var activityForm=document.getElementById('daily-activity-form');
   if(activityForm){
@@ -1412,7 +1445,7 @@ h3{font-size:17px;letter-spacing:-.025em}
       try{
         await fetch('https://hook.us2.make.com/djxfc3u3s2tcgx5tiimv81t1uulr20mk',{method:'POST',mode:'no-cors',body:params});
         status.textContent='';
-        window.alert('Daily activity report submitted!');
+        showReportConfirmation();
         status.className='report-status success';
         activityForm.reset();
         syncBelowTargetReason();
