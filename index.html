@@ -1411,13 +1411,14 @@ h3{font-size:17px;letter-spacing:-.025em}
       submit.disabled=true;submit.textContent='Submitting…';status.textContent='Sending report…';status.className='report-status';
       try{
         await fetch('https://hook.us2.make.com/djxfc3u3s2tcgx5tiimv81t1uulr20mk',{method:'POST',mode:'no-cors',body:params});
-        status.textContent='Report sent. The webhook does not return a readable confirmation, so please check with your manager if you need receipt verification.';
+        status.textContent='';
+        window.alert('Daily activity report submitted!');
         status.className='report-status success';
         activityForm.reset();
         syncBelowTargetReason();
         if(activityDate){var d=new Date();activityDate.value=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);}
       }catch(err){
-        status.textContent='Could not send the report. Check your connection and try again. Your entries are still here.';
+        status.textContent='Could not submit your report. Please try again.';
         status.className='report-status error';
       }finally{submit.disabled=false;submit.textContent='Submit Daily Activity';}
     });
