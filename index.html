@@ -1346,6 +1346,13 @@ h3{font-size:17px;letter-spacing:-.025em}
     for(i=0;i<ps.length;i++) ps[i].classList.remove('active');
     var target = document.getElementById('page-'+id);
     if(target) target.classList.add('active');
+    if(id==='activity'){
+      var activityDayField=document.querySelector('#daily-activity-form [name="date"]');
+      if(activityDayField){
+        var nowDay=new Date();
+        activityDayField.value=new Date(nowDay.getTime()-nowDay.getTimezoneOffset()*60000).toISOString().slice(0,10);
+      }
+    }
 
     var links = document.querySelectorAll('#navlist .navlink');
     for(i=0;i<links.length;i++){
