@@ -624,6 +624,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 @media(max-width:760px){.sales-modal{padding:10px}.sales-modal-panel{max-height:calc(100vh - 20px)}.sales-modal-head{padding:22px 18px 16px}.sales-modal-head h2{font-size:25px}.sales-modal-fields{grid-template-columns:1fr 1fr;padding:18px}.sales-modal-results{padding:22px 18px}.modal-result-grid{grid-template-columns:1fr 1fr}.modal-result-grid>div{border-right:1px solid #354056!important;border-bottom:1px solid #354056!important}.modal-result-grid>div:nth-child(2n){border-right:0!important}.modal-result-grid>div:nth-last-child(-n+2){border-bottom:0!important}}
 @media(max-width:460px){.sales-modal-fields,.modal-result-grid{grid-template-columns:1fr}.modal-result-grid>div{border-right:0!important}.modal-result-grid>div:nth-last-child(2){border-bottom:1px solid #354056!important}.modal-primary strong{font-size:36px}}
 
+.report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:14px}.report-grid label,.report-wide{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px;margin-bottom:14px}.report-grid input,.report-wide textarea{border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;width:100%;background:#fff;color:var(--text)}.report-grid input:focus,.report-wide textarea:focus{outline:2px solid var(--blue);outline-offset:1px}.report-help{font-size:13px;color:var(--muted)}.report-status{margin-top:12px;font-weight:700}.report-status.error{color:var(--red)}.report-status.success{color:var(--green)}@media(max-width:620px){.report-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -654,15 +655,13 @@ h3{font-size:17px;letter-spacing:-.025em}
 
       <div class="sb-label">Sell</div>
       <button class="navlink" data-go="scripts"><span class="nav-ico">5</span> Cold Call</button>
-      <button class="navlink" data-go="discovery"><span class="nav-ico">6</span> Discovery &amp; Value</button>
       <button class="navlink" data-go="objections"><span class="nav-ico">7</span> Objection Handling</button>
-      <button class="navlink" data-go="closing"><span class="nav-ico">8</span> Close the Deal</button>
-
       <div class="sb-label">After the Call</div>
-      <button class="navlink" data-go="followup"><span class="nav-ico">9</span> Follow-Up &amp; Appointments</button>
+      <button class="navlink" data-go="followup"><span class="nav-ico">8</span> Your Follow-Ups</button>
       <button class="navlink" data-go="onboarding"><span class="nav-ico">10</span> Client Onboarding</button>
-      <button class="navlink" data-go="expectations"><span class="nav-ico">11</span> Daily Standards</button>
-    </nav>
+      <button class="navlink" data-go="expectations"><span class="nav-ico">✓</span> Daily Standards</button>
+    <button class="navlink" data-go="activity"><span class="nav-ico">✓</span> Daily Activity Form</button>
+</nav>
 
     
     <div class="sb-foot">
@@ -687,70 +686,16 @@ h3{font-size:17px;letter-spacing:-.025em}
 
     <!-- ================= HOME ================= -->
     <section class="page" id="page-home">
-      <div class="hero sales-hero">
-        <div class="hero-inner">
-          <div class="eyebrow" style="color:#F07A52">Summit Results Agency · Full-Cycle Sales</div>
-          <h1>From first dial to live client.</h1>
-          <p>This is the working playbook for full-cycle reps. Start the conversation, find the problem, build value, close the deal, and guide the client into onboarding. Keep it natural and move the sale forward.</p>
-          <div class="btnrow">
-            <button class="btn" data-go="scripts">Start a Call</button>
-            <button class="btn ghost" data-go="objections">Handle an Objection</button>
-            <button class="btn purple" data-go="closing">Close the Deal</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="statrow">
-        <div class="stat"><div class="stat-v">$397</div><div class="stat-l">AI receptionist monthly price</div></div>
-        <div class="stat"><div class="stat-v">Unlimited</div><div class="stat-l">Call volume on the standard AI plan</div></div>
-        <div class="stat"><div class="stat-v">~24 hrs</div><div class="stat-l">Typical first AI build after onboarding</div></div>
-        <div class="stat"><div class="stat-v">Full cycle</div><div class="stat-l">Own the opportunity from call to close</div></div>
-      </div>
-
-      <div class="deal-principle">
-        <span class="deal-kicker">THE DEFAULT</span>
-        <div>
-          <strong>Go as far as the conversation allows.</strong>
-          <p>If the prospect has time and interest, keep moving toward the sale. If they cannot continue, schedule your own follow-up. Handing the opportunity to another closer is the exception.</p>
-        </div>
-      </div>
-
-      <h2>Three parts of the job</h2>
-      <div class="phase-grid">
-        <button class="phase-card" data-go="scripts">
-          <span class="phase-no">01</span><span class="phase-tag">Cold Call</span>
-          <strong>Open the conversation.</strong>
-          <p>Reach the decision maker, understand the call problem, qualify the opportunity, and move naturally into the solution.</p>
-        </button>
-        <button class="phase-card" data-go="closing">
-          <span class="phase-no">02</span><span class="phase-tag">Close</span>
-          <strong>Turn interest into a client.</strong>
-          <p>Build value, answer the real concern, present pricing, ask for the business, and collect payment.</p>
-        </button>
-        <button class="phase-card" data-go="onboarding">
-          <span class="phase-no">03</span><span class="phase-tag">Onboard</span>
-          <strong>Make the handoff clean.</strong>
-          <p>Get the onboarding form completed, set expectations, and stay with the client while the team builds and launches.</p>
-        </button>
-      </div>
-
-      <h2>Jump in where you need it</h2>
-      <div class="tiles">
-        <button class="tile" data-go="process"><span class="tile-num">01</span><span class="tile-t">Sales Process</span><span class="tile-d">The full path from cold lead to live client.</span></button>
-        <button class="tile" data-go="product"><span class="tile-num">02</span><span class="tile-t">Product &amp; Scope</span><span class="tile-d">What the AI can do and what is included.</span></button>
-        <button class="tile" data-go="pricing"><span class="tile-num">03</span><span class="tile-t">Pricing &amp; Offer</span><span class="tile-d">Standard pricing, payment links, and discount rules.</span></button>
-        <button class="tile" data-go="scripts"><span class="tile-num">04</span><span class="tile-t">Cold Call</span><span class="tile-d">A natural conversation path that keeps moving.</span></button>
-        <button class="tile" data-go="discovery"><span class="tile-num">05</span><span class="tile-t">Discovery &amp; Value</span><span class="tile-d">Find out whether the economics actually make sense.</span></button>
-        <button class="tile" data-go="objections"><span class="tile-num">06</span><span class="tile-t">Objection Handling</span><span class="tile-d">Diagnose the concern instead of arguing with it.</span></button>
-        <button class="tile" data-go="closing"><span class="tile-num">07</span><span class="tile-t">Close the Deal</span><span class="tile-d">Demo, price, ask, payment, next step.</span></button>
-        <button class="tile" data-go="followup"><span class="tile-num">08</span><span class="tile-t">Follow-Up</span><span class="tile-d">Own your calendar and keep momentum.</span></button>
-        <button class="tile" data-go="onboarding"><span class="tile-num">09</span><span class="tile-t">Client Onboarding</span><span class="tile-d">What happens immediately after the sale.</span></button>
-      </div>
-    </section>
+<div class="hero sales-hero"><div class="hero-inner"><div class="eyebrow" style="color:#F07A52">Summit Results Agency · Full-Cycle Sales</div><h1>Own the call. Own the close.</h1><p>Every rep is responsible for prospecting, discovery, demo, pricing, payment, follow-up, and onboarding. Keep the conversation moving and own the result.</p><div class="btnrow"><button class="btn" data-go="scripts">Open Full Sales Scripts</button><button class="btn ghost" data-go="activity">Submit Daily Activity</button></div></div></div>
+<div class="statrow"><div class="stat"><div class="stat-v">125+</div><div class="stat-l">Minimum outbound dials per working day</div></div><div class="stat"><div class="stat-v">3+</div><div class="stat-l">Minimum closed sales each week</div></div><div class="stat"><div class="stat-v">Daily</div><div class="stat-l">Activity report at the end of every working day</div></div><div class="stat"><div class="stat-v">Full cycle</div><div class="stat-l">Own prospects through payment and onboarding</div></div></div>
+<div class="note warn"><strong>Non-negotiable standards:</strong> At least 125 outbound dials each working day, at least 3 closed sales each week, accurate CRM updates, and a completed daily activity report before finishing every working day. Communicate blockers early.</div>
+<h2>The full-cycle path</h2><div class="phase-grid"><button class="phase-card" data-go="scripts"><span class="phase-no">01</span><span class="phase-tag">Prospect</span><strong>Make the calls.</strong><p>Lead with missed and after-hours opportunities. Discover the real need.</p></button><button class="phase-card" data-go="scripts"><span class="phase-no">02</span><span class="phase-tag">Close</span><strong>Finish the sale.</strong><p>Show the demo, present the price, handle concerns, ask, and collect payment.</p></button><button class="phase-card" data-go="onboarding"><span class="phase-no">03</span><span class="phase-tag">Onboard</span><strong>Own the handoff.</strong><p>Send the form, confirm the next steps, and keep the CRM current.</p></button></div>
+<h2>Quick access</h2><div class="tiles"><button class="tile" data-go="process"><span class="tile-num">01</span><span class="tile-t">Sales Process</span><span class="tile-d">Cold call through onboarding.</span></button><button class="tile" data-go="scripts"><span class="tile-num">02</span><span class="tile-t">Full Call Scripts</span><span class="tile-d">Three complete sales conversations.</span></button><button class="tile" data-go="objections"><span class="tile-num">03</span><span class="tile-t">Objections</span><span class="tile-d">Address the real concern.</span></button><button class="tile" data-go="pricing"><span class="tile-num">04</span><span class="tile-t">Pricing &amp; Payment</span><span class="tile-d">Standard offers and checkout links.</span></button><button class="tile" data-go="followup"><span class="tile-num">05</span><span class="tile-t">Your Follow-Ups</span><span class="tile-d">Retain ownership of every deal.</span></button><button class="tile" data-go="activity"><span class="tile-num">06</span><span class="tile-t">Daily Activity Form</span><span class="tile-d">Submit before ending each workday.</span></button></div>
+</section>
 
     <!-- ================= START ================= -->
     <section class="page" id="page-start">
-      <div class="eyebrow">Section 01</div>
+      <div class="eyebrow">Sales Guide</div>
       <h1>Start Here</h1>
       <p class="lead">Your job is not to read a script or fill a calendar. Your job is to have good business conversations and turn the right opportunities into clients.</p>
 
@@ -773,7 +718,7 @@ h3{font-size:17px;letter-spacing:-.025em}
       <div class="priority-stack">
         <div><span>1</span><strong>Close now</strong><p>If the prospect has the time, interest, and fit, finish the sale.</p></div>
         <div><span>2</span><strong>Book yourself</strong><p>If they need more time, a proper demo, or another decision maker, schedule your own follow-up.</p></div>
-        <div><span>3</span><strong>Bring in the team</strong><p>Use a team handoff when the deal needs technical scoping, special approval, or support beyond your authority.</p></div>
+        <div><span>3</span><strong>Get approval, keep ownership</strong><p>Request manager approval for nonstandard pricing or technical promises, but keep the prospect and the close yourself.</p></div>
       </div>
 
       <div class="note warn">
@@ -784,7 +729,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 
     <!-- ================= PROCESS ================= -->
     <section class="page" id="page-process">
-      <div class="eyebrow">Section 02</div>
+      <div class="eyebrow">Sales Guide</div>
       <h1>Sales Process</h1>
       <p class="lead">One opportunity, one owner. You stay responsible for momentum until the prospect becomes a client or clearly leaves the pipeline.</p>
 
@@ -797,13 +742,13 @@ h3{font-size:17px;letter-spacing:-.025em}
         <div><span>06</span><strong>Onboard</strong><small>Form → build → launch</small></div>
       </div>
 
-      <h2>The normal path</h2>
+      <h2>The full-cycle path</h2>
       <div class="card">
         <div class="pipe">
           <div class="pstage sdr"><div class="rail"><div class="pdot">1</div><div class="pline"></div></div><div class="pbody"><div class="pt">Cold conversation</div><div class="pd">Reach the decision maker and earn enough attention to understand how calls are handled today.</div></div></div>
           <div class="pstage sdr"><div class="rail"><div class="pdot">2</div><div class="pline"></div></div><div class="pbody"><div class="pt">Discovery</div><div class="pd">Missed calls, current process, average customer value, call volume, and whether the problem matters.</div></div></div>
           <div class="pstage sdr"><div class="rail"><div class="pdot">3</div><div class="pline"></div></div><div class="pbody"><div class="pt">Solution and demo</div><div class="pd">Explain how the AI would handle the exact problem they described. Use the live demo when it helps.</div></div></div>
-          <div class="pstage team"><div class="rail"><div class="pdot">4</div><div class="pline"></div></div><div class="pbody"><div class="pt">Price and objections</div><div class="pd">Present the standard offer, understand any hesitation, and build value around their situation.</div></div></div>
+          <div class="pstage team"><div class="rail"><div class="pdot">4</div><div class="pline"></div></div><div class="pbody"><div class="pt">Price and objections</div><div class="pd">After the demo, present the standard offer, understand hesitation, and build value around their situation.</div></div></div>
           <div class="pstage team"><div class="rail"><div class="pdot">5</div><div class="pline"></div></div><div class="pbody"><div class="pt">Close and payment</div><div class="pd">Ask directly for the business. Once they choose the plan, send the correct payment link and confirm the next step.</div></div></div>
           <div class="pstage close"><div class="rail"><div class="pdot">6</div><div class="pline"></div></div><div class="pbody"><div class="pt">Onboarding form</div><div class="pd">The client provides the business information and call-handling details needed for the build.</div></div></div>
           <div class="pstage close"><div class="rail"><div class="pdot">7</div><div class="pline"></div></div><div class="pbody"><div class="pt">Build, test, revise</div><div class="pd">The team normally prepares the first AI receptionist version within about 24 hours. The client tests it and requests changes if needed.</div></div></div>
@@ -820,7 +765,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 
     <!-- ================= PRODUCT ================= -->
     <section class="page" id="page-product">
-      <div class="eyebrow">Section 03</div>
+      <div class="eyebrow">Sales Guide</div>
       <h1>Product &amp; Scope</h1>
       <p class="lead">Sell the outcome first. Know the scope well enough to answer normal questions confidently without promising custom technical work you have not verified.</p>
 
@@ -896,7 +841,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 
     <!-- ================= PRICING ================= -->
     <section class="page" id="page-pricing">
-      <div class="eyebrow">Section 04</div>
+      <div class="eyebrow">Sales Guide</div>
       <h1>Pricing &amp; Offer</h1>
       <p class="lead">Present the price clearly. Do not apologize for it. The value conversation comes from the prospect's economics, not from pretending the price is small.</p>
 
@@ -951,9 +896,9 @@ h3{font-size:17px;letter-spacing:-.025em}
 
     <!-- ================= COLD CALL ================= -->
     <section class="page" id="page-scripts">
-      <div class="eyebrow">Section 05</div>
-      <h1>Cold Call</h1>
-      <p class="lead">The opener gets you into the conversation. After that, listen, discover, and keep moving. The objective is not to book a meeting. The objective is to advance the sale as far as the prospect has time for.</p>
+      <div class="eyebrow">Sales Guide</div>
+      <h1>Full-Cycle Cold Call Scripts</h1>
+      <p class="lead">Lead with missed and after-hours calls, not the product name. All three scripts take you through discovery, demo, price, close, payment, and onboarding. Own the full sales cycle.</p>
 
       <div class="tabs" id="scripttabs">
         <button class="tab active" data-tab="s1">Direct</button>
@@ -961,195 +906,204 @@ h3{font-size:17px;letter-spacing:-.025em}
         <button class="tab" data-tab="s3">AI Audit</button>
       </div>
       
-      <div class="tabpane active" id="tab-s1">
-        <h2 style="margin-top:0">Direct Full-Cycle Script</h2>
-        <div class="note"><p style="margin-bottom:0"><strong>Use this as a full call framework from opener to close.</strong> Speak naturally. Do not read every line if the prospect already gave you the answer.</p></div>
-
-        <div class="step"><div class="snum">1</div><div class="sbody">
-          <div class="sh">Reach the owner</div>
-          <div class="say">"Hey, is this [Business Name]?"</div>
-          <div class="say">"Perfect. This is [Name] with Summit Results Agency. Would you happen to be the owner?"</div>
-        </div></div>
-
-        <div class="step"><div class="snum">2</div><div class="sbody">
-          <div class="sh">Open with the missed-call question</div>
-          <div class="say">"Perfect. I was calling because we're working with businesses in the area and helping make sure customer calls don't just go to voicemail. When you guys are busy, on a job, or can't get to the phone, do calls ever end up going unanswered or to voicemail?"</div>
-          <div class="cue stopcue">Stop and let them answer. Do not rush into the pitch.</div>
-        </div></div>
-
-        <div class="step"><div class="snum">3</div><div class="sbody">
+      <div class="tabpane active" id="tab-s1"><h2 style="margin-top:0">Direct Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Lead with missed and after-hours calls</div><div class="say">"The reason I'm calling is we're helping [Industry] businesses make sure customer calls don't get lost when everyone's busy or the office is closed. When someone calls during a job or in the evening, does it ever go unanswered or to voicemail?"</div><div class="cue">Lead with the problem, not the AI. Let them explain what happens.</div></div></div><div class="step"><div class="snum">3</div><div class="sbody">
           <div class="sh">Understand what happens now</div>
           <div class="say">"About how many calls would you say that happens with on a normal day or week?"</div>
           <div class="say">"And what usually happens with those callers after that? Do they leave a voicemail, call back, or is it kind of hit or miss?"</div>
           <div class="say">"Who normally handles the phone when you guys are available?"</div>
           <div class="cue">If they say they almost never miss calls, explore after-hours or busy periods once. If there is no real problem, do not force one.</div>
         </div></div>
-
-        <div class="step"><div class="snum">4</div><div class="sbody">
+<div class="step"><div class="snum">4</div><div class="sbody">
           <div class="sh">Introduce the solution</div>
           <div class="say">"Got it. That's exactly what we help with. We set up an AI receptionist that can step in when your team can't answer. It can talk to the customer, answer common questions, collect their information, and either help get them booked or make sure your team has everything they need to follow up."</div>
           <div class="say">"The main idea is just making sure those calls don't disappear into voicemail."</div>
           <div class="cue stopcue">Pause and let them react.</div>
         </div></div>
-
-        <div class="step"><div class="snum">5</div><div class="sbody">
+<div class="step"><div class="snum">5</div><div class="sbody">
           <div class="sh">Work through the numbers together</div>
           <div class="say">"Roughly what is an average new customer or job worth to you?"</div>
           <div class="cue">Use the missed-call number they already gave you. Confirm both numbers before doing the math.</div>
           <div class="say">"Okay, so you said you're missing about [X] calls [per day/week/month], and an average customer is worth about $[Y]. Did I get that right?"</div>
           <div class="say">"That works out to roughly [monthly missed calls] missed calls a month. If even 20 to 30 percent of those callers turned into customers, you're looking at around [low customers] to [high customers] customers, or roughly $[low revenue] to $[high revenue] in gross sales."</div>
-          <div class="say">"The AI receptionist is $397 a month. At your average ticket, it would only need to help capture about [break-even customers] additional customer(s) in a month for the $397 to be covered in gross sales."</div>
-          <div class="say">"And at around [chosen recovery %] percent of those missed calls becoming customers, you'd be spending roughly $[cost per captured customer] to capture a customer worth about $[average ticket]."</div>
+          <div class="say">"At that customer value, even recovering a few of those opportunities could make a meaningful difference."</div>
+          <div class="say">"Those are estimated gross sales, not guaranteed profit. Does that potential justify exploring a way to cover those calls?"</div>
           <div class="say">"So based on your own numbers, does it look like capturing more of those calls would make sense for the business?"</div>
           <div class="cue">The percentages are illustrations, not guarantees. Let the prospect correct the assumptions. If the numbers do not make sense, do not force the sale.</div>
-          <button class="btn ghost" type="button" id="open-script-roi">Open Call Value Calculator</button>
+          <button class="btn ghost open-script-roi" type="button">Open Call Value Calculator</button>
         </div></div>
-
-        <div class="step"><div class="snum">6</div><div class="sbody">
+<div class="step"><div class="snum">6</div><div class="sbody">
           <div class="sh">Check product fit</div>
           <div class="say">"Would you want the AI actually booking appointments directly, or would it be better for it to handle the caller, get all their information and preferred time frame, and then have your team follow up?"</div>
           <div class="cue">Use their answer to explain the relevant setup. Keep it specific to their business.</div>
         </div></div>
-
-        <div class="step"><div class="snum">7</div><div class="sbody">
-          <div class="sh">Present the price</div>
-          <div class="say">"The AI receptionist is $397 a month. That includes the custom setup around your business and unlimited call volume."</div>
-          <div class="say">"Based on what you've told me so far, do you feel like solving those missed calls would be worth that for the business?"</div>
-          <div class="cue">If they object, stay on this call and handle the real objection. Use the Objection Handling page only as a reference if you need it.</div>
-        </div></div>
-
-        <div class="step"><div class="snum">8</div><div class="sbody">
+<div class="step"><div class="snum">7</div><div class="sbody">
           <div class="sh">Demo when helpful</div>
           <div class="say">"If you want, I can actually let you try the AI receptionist so you can hear what the experience is like."</div>
           <div class="cue">Use the live demo if hearing the product will help them make the decision. You do not need to force a demo if they already understand the offer and are ready to move forward.</div>
           <a class="btn purple" href="https://summitresultsagency.com/ai-receptionist" target="_blank" rel="noopener noreferrer">Open Live Demo &#8599;</a>
         </div></div>
-
-        <div class="step"><div class="snum">9</div><div class="sbody">
+<div class="step"><div class="snum">8</div><div class="sbody">
+          <div class="sh">Present the price</div>
+          <div class="say">"The AI receptionist is $397 a month. That includes the custom setup around your business and unlimited call volume."</div>
+          <div class="say">"Based on what you've told me so far, do you feel like solving those missed calls would be worth that for the business?"</div>
+          <div class="cue">If they object, stay on this call and handle the real objection. Use the Objection Handling page only as a reference if you need it.</div>
+        </div></div>
+<div class="step"><div class="snum">9</div><div class="sbody">
           <div class="sh">Ask for the sale</div>
           <div class="say">"Based on everything we've gone through, do you want to get this set up?"</div>
           <div class="cue stopcue">Stop talking. Let them answer.</div>
         </div></div>
-
-        <div class="step"><div class="snum">10</div><div class="sbody">
+<div class="step"><div class="snum">10</div><div class="sbody">
           <div class="sh">If they say yes</div>
           <div class="say">"Perfect. I'll send you the payment link for the AI receptionist. Once that's completed, the next step is the onboarding form so our team has everything needed to build it around your business."</div>
           <div class="cue">Send the correct payment link from Pricing. After payment, send the onboarding form below.</div>
           <button class="btn" data-go="pricing">Open Pricing &amp; Payment</button>
           <a class="btn ghost" href="https://api.leadconnectorhq.com/widget/form/8Th7Cqd3SZ7szopsah2L" target="_blank" rel="noopener noreferrer">Open Onboarding Form &#8599;</a>
         </div></div>
-
-        <div class="step"><div class="snum">11</div><div class="sbody">
+<div class="step"><div class="snum">11</div><div class="sbody">
           <div class="sh">Set onboarding expectations</div>
           <div class="say">"Once we have the payment and onboarding form, we normally have the first version ready within about 24 hours. We'll send it over for you to test, you can tell us anything you want changed, and once you approve it we'll get you live."</div>
           <div class="say">"At launch, we'll give you the phone number you'll use for call forwarding, and from there the AI can start handling the calls based on the setup we built."</div>
         </div></div>
-
-        <div class="step"><div class="snum">12</div><div class="sbody">
-          <div class="sh">If they cannot continue right now</div>
+<div class="step"><div class="snum">12</div><div class="sbody">
+          <div class="sh">If they need a follow-up</div>
           <div class="say alt">"No problem. Let's put 15 minutes on my calendar when you have more time and we'll pick it back up there."</div>
-          <div class="cue">Schedule your own follow-up. Only bring in another team member when there is a specific reason.</div>
+          <div class="cue">Schedule your own follow-up. Keep the follow-up yourself and own the close.</div>
+        </div></div></div>
+<div class="tabpane" id="tab-s2"><h2 style="margin-top:0">Permission-Based Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Ask permission for 30 seconds</div><div class="say">"I'll be upfront, this is a cold call. We're working with [Industry] businesses to stop customer opportunities slipping through missed and after-hours calls. Have you got 30 seconds for why I reached out?"</div><div class="cue">If yes, give the reason before asking your first discovery question.</div><div class="say">"Thanks. A lot of good customers call while the team is out working or after closing, then move on if nobody answers. We're helping businesses capture those calls instead of losing the opportunity. When your phones get busy or it gets into the evening, what happens to incoming calls?"</div><div class="cue">If no, respect it. Ask for a better time only if they are open to it.</div></div></div><div class="step"><div class="snum">3</div><div class="sbody">
+          <div class="sh">Understand what happens now</div>
+          <div class="say">"About how many calls would you say that happens with on a normal day or week?"</div>
+          <div class="say">"And what usually happens with those callers after that? Do they leave a voicemail, call back, or is it kind of hit or miss?"</div>
+          <div class="say">"Who normally handles the phone when you guys are available?"</div>
+          <div class="cue">If they say they almost never miss calls, explore after-hours or busy periods once. If there is no real problem, do not force one.</div>
         </div></div>
-      </div>
-      <div class="tabpane" id="tab-s2">
-        <div class="say">"Hey, this is [Name] with Summit Results Agency. Would you happen to be the owner?"</div>
-        <div class="say">"Perfect. I'll be quick. We work with businesses that lose opportunities when calls go unanswered. Do you have 30 seconds?"</div>
-        <div class="say">"Great. What normally happens when somebody calls and your team can't pick up?"</div>
-      </div>
-      <div class="tabpane" id="tab-s3">
-        <div class="say">"Hey, this is [Name] with Summit Results Agency. Would you happen to be the owner?"</div>
-        <div class="say">"Perfect. We're doing quick AI audits with businesses in the area to see whether missed calls are actually costing them customers. About how often would you say calls go unanswered or to voicemail?"</div>
-      </div>
-
-      <h2>The conversation path</h2>
-      <div class="conversation-path">
-        <div class="conv-step"><span>1</span><div><strong>Understand the current situation</strong><p>"About how many calls do you think go unanswered on a normal day or week?"</p><p>"What happens with those callers right now?"</p></div></div>
-        <div class="conv-step"><span>2</span><div><strong>Understand the value of the problem</strong><p>"Roughly what is an average new customer worth to you?"</p></div></div>
-        <div class="conv-step"><span>3</span><div><strong>Connect their problem to the product</strong><p>"That's exactly where the AI receptionist can help. When your team can't answer, it can pick up, talk to the customer, capture what they need, and either book them or make sure your team has everything needed to follow up."</p></div></div>
-        <div class="conv-step"><span>4</span><div><strong>Check interest</strong><p>"Would something like that actually be useful for the way you guys handle calls?"</p></div></div>
-        <div class="conv-step"><span>5</span><div><strong>Keep going</strong><p>If yes, continue into value, product questions, demo, price, and close. Do not automatically stop and book a meeting.</p></div></div>
-      </div>
-
-      <div class="note good"><p style="margin-bottom:0"><strong>When they are busy:</strong> "No problem. Let's get a time on my calendar when you have 15 minutes and I'll pick it back up with you." Schedule your own follow-up while you still have them.</p></div>
-      <div class="btnrow"><button class="btn" data-go="discovery">Next: Discovery &amp; Value</button></div>
-    </section>
+<div class="step"><div class="snum">4</div><div class="sbody">
+          <div class="sh">Introduce the solution</div>
+          <div class="say">"Got it. That's exactly what we help with. We set up an AI receptionist that can step in when your team can't answer. It can talk to the customer, answer common questions, collect their information, and either help get them booked or make sure your team has everything they need to follow up."</div>
+          <div class="say">"The main idea is just making sure those calls don't disappear into voicemail."</div>
+          <div class="cue stopcue">Pause and let them react.</div>
+        </div></div>
+<div class="step"><div class="snum">5</div><div class="sbody">
+          <div class="sh">Work through the numbers together</div>
+          <div class="say">"Roughly what is an average new customer or job worth to you?"</div>
+          <div class="cue">Use the missed-call number they already gave you. Confirm both numbers before doing the math.</div>
+          <div class="say">"Okay, so you said you're missing about [X] calls [per day/week/month], and an average customer is worth about $[Y]. Did I get that right?"</div>
+          <div class="say">"That works out to roughly [monthly missed calls] missed calls a month. If even 20 to 30 percent of those callers turned into customers, you're looking at around [low customers] to [high customers] customers, or roughly $[low revenue] to $[high revenue] in gross sales."</div>
+          <div class="say">"At that customer value, even recovering a few of those opportunities could make a meaningful difference."</div>
+          <div class="say">"Those are estimated gross sales, not guaranteed profit. Does that potential justify exploring a way to cover those calls?"</div>
+          <div class="say">"So based on your own numbers, does it look like capturing more of those calls would make sense for the business?"</div>
+          <div class="cue">The percentages are illustrations, not guarantees. Let the prospect correct the assumptions. If the numbers do not make sense, do not force the sale.</div>
+          <button class="btn ghost open-script-roi" type="button">Open Call Value Calculator</button>
+        </div></div>
+<div class="step"><div class="snum">6</div><div class="sbody">
+          <div class="sh">Check product fit</div>
+          <div class="say">"Would you want the AI actually booking appointments directly, or would it be better for it to handle the caller, get all their information and preferred time frame, and then have your team follow up?"</div>
+          <div class="cue">Use their answer to explain the relevant setup. Keep it specific to their business.</div>
+        </div></div>
+<div class="step"><div class="snum">7</div><div class="sbody">
+          <div class="sh">Demo when helpful</div>
+          <div class="say">"If you want, I can actually let you try the AI receptionist so you can hear what the experience is like."</div>
+          <div class="cue">Use the live demo if hearing the product will help them make the decision. You do not need to force a demo if they already understand the offer and are ready to move forward.</div>
+          <a class="btn purple" href="https://summitresultsagency.com/ai-receptionist" target="_blank" rel="noopener noreferrer">Open Live Demo &#8599;</a>
+        </div></div>
+<div class="step"><div class="snum">8</div><div class="sbody">
+          <div class="sh">Present the price</div>
+          <div class="say">"The AI receptionist is $397 a month. That includes the custom setup around your business and unlimited call volume."</div>
+          <div class="say">"Based on what you've told me so far, do you feel like solving those missed calls would be worth that for the business?"</div>
+          <div class="cue">If they object, stay on this call and handle the real objection. Use the Objection Handling page only as a reference if you need it.</div>
+        </div></div>
+<div class="step"><div class="snum">9</div><div class="sbody">
+          <div class="sh">Ask for the sale</div>
+          <div class="say">"Based on everything we've gone through, do you want to get this set up?"</div>
+          <div class="cue stopcue">Stop talking. Let them answer.</div>
+        </div></div>
+<div class="step"><div class="snum">10</div><div class="sbody">
+          <div class="sh">If they say yes</div>
+          <div class="say">"Perfect. I'll send you the payment link for the AI receptionist. Once that's completed, the next step is the onboarding form so our team has everything needed to build it around your business."</div>
+          <div class="cue">Send the correct payment link from Pricing. After payment, send the onboarding form below.</div>
+          <button class="btn" data-go="pricing">Open Pricing &amp; Payment</button>
+          <a class="btn ghost" href="https://api.leadconnectorhq.com/widget/form/8Th7Cqd3SZ7szopsah2L" target="_blank" rel="noopener noreferrer">Open Onboarding Form &#8599;</a>
+        </div></div>
+<div class="step"><div class="snum">11</div><div class="sbody">
+          <div class="sh">Set onboarding expectations</div>
+          <div class="say">"Once we have the payment and onboarding form, we normally have the first version ready within about 24 hours. We'll send it over for you to test, you can tell us anything you want changed, and once you approve it we'll get you live."</div>
+          <div class="say">"At launch, we'll give you the phone number you'll use for call forwarding, and from there the AI can start handling the calls based on the setup we built."</div>
+        </div></div>
+<div class="step"><div class="snum">12</div><div class="sbody">
+          <div class="sh">If they need a follow-up</div>
+          <div class="say alt">"No problem. Let's put 15 minutes on my calendar when you have more time and we'll pick it back up there."</div>
+          <div class="cue">Schedule your own follow-up. Keep the follow-up yourself and own the close.</div>
+        </div></div></div>
+<div class="tabpane" id="tab-s3"><h2 style="margin-top:0">Missed-Call Audit Full-Cycle Script</h2><div class="note"><p><strong>Run the complete sales process.</strong> Adapt the words naturally. Discover, demonstrate, price, close, take payment, and send onboarding without handing off the prospect.</p></div><div class="step"><div class="snum">1</div><div class="sbody"><div class="sh">Reach the decision maker</div><div class="say">"Hey, is this [Business Name]?"</div><div class="say">"This is [Your Name] with Summit Results Agency. Are you the owner?"</div></div></div><div class="step"><div class="snum">2</div><div class="sbody"><div class="sh">Offer a quick missed-call check</div><div class="say">"I'm reaching out because we're helping [Industry] businesses spot revenue that can slip through when calls come in during busy hours, evenings, and weekends. Could I ask you one quick question to see whether that's relevant?"</div><div class="cue">Wait for agreement, then explain the situation before asking.</div><div class="say">"When someone calls after hours or while everyone is tied up, the caller often moves on instead of leaving a message. We're looking at whether that's happening for local businesses. What usually happens to those calls at your company?"</div></div></div><div class="step"><div class="snum">3</div><div class="sbody">
+          <div class="sh">Understand what happens now</div>
+          <div class="say">"About how many calls would you say that happens with on a normal day or week?"</div>
+          <div class="say">"And what usually happens with those callers after that? Do they leave a voicemail, call back, or is it kind of hit or miss?"</div>
+          <div class="say">"Who normally handles the phone when you guys are available?"</div>
+          <div class="cue">If they say they almost never miss calls, explore after-hours or busy periods once. If there is no real problem, do not force one.</div>
+        </div></div>
+<div class="step"><div class="snum">4</div><div class="sbody">
+          <div class="sh">Introduce the solution</div>
+          <div class="say">"Got it. That's exactly what we help with. We set up an AI receptionist that can step in when your team can't answer. It can talk to the customer, answer common questions, collect their information, and either help get them booked or make sure your team has everything they need to follow up."</div>
+          <div class="say">"The main idea is just making sure those calls don't disappear into voicemail."</div>
+          <div class="cue stopcue">Pause and let them react.</div>
+        </div></div>
+<div class="step"><div class="snum">5</div><div class="sbody">
+          <div class="sh">Work through the numbers together</div>
+          <div class="say">"Roughly what is an average new customer or job worth to you?"</div>
+          <div class="cue">Use the missed-call number they already gave you. Confirm both numbers before doing the math.</div>
+          <div class="say">"Okay, so you said you're missing about [X] calls [per day/week/month], and an average customer is worth about $[Y]. Did I get that right?"</div>
+          <div class="say">"That works out to roughly [monthly missed calls] missed calls a month. If even 20 to 30 percent of those callers turned into customers, you're looking at around [low customers] to [high customers] customers, or roughly $[low revenue] to $[high revenue] in gross sales."</div>
+          <div class="say">"At that customer value, even recovering a few of those opportunities could make a meaningful difference."</div>
+          <div class="say">"Those are estimated gross sales, not guaranteed profit. Does that potential justify exploring a way to cover those calls?"</div>
+          <div class="say">"So based on your own numbers, does it look like capturing more of those calls would make sense for the business?"</div>
+          <div class="cue">The percentages are illustrations, not guarantees. Let the prospect correct the assumptions. If the numbers do not make sense, do not force the sale.</div>
+          <button class="btn ghost open-script-roi" type="button">Open Call Value Calculator</button>
+        </div></div>
+<div class="step"><div class="snum">6</div><div class="sbody">
+          <div class="sh">Check product fit</div>
+          <div class="say">"Would you want the AI actually booking appointments directly, or would it be better for it to handle the caller, get all their information and preferred time frame, and then have your team follow up?"</div>
+          <div class="cue">Use their answer to explain the relevant setup. Keep it specific to their business.</div>
+        </div></div>
+<div class="step"><div class="snum">7</div><div class="sbody">
+          <div class="sh">Demo when helpful</div>
+          <div class="say">"If you want, I can actually let you try the AI receptionist so you can hear what the experience is like."</div>
+          <div class="cue">Use the live demo if hearing the product will help them make the decision. You do not need to force a demo if they already understand the offer and are ready to move forward.</div>
+          <a class="btn purple" href="https://summitresultsagency.com/ai-receptionist" target="_blank" rel="noopener noreferrer">Open Live Demo &#8599;</a>
+        </div></div>
+<div class="step"><div class="snum">8</div><div class="sbody">
+          <div class="sh">Present the price</div>
+          <div class="say">"The AI receptionist is $397 a month. That includes the custom setup around your business and unlimited call volume."</div>
+          <div class="say">"Based on what you've told me so far, do you feel like solving those missed calls would be worth that for the business?"</div>
+          <div class="cue">If they object, stay on this call and handle the real objection. Use the Objection Handling page only as a reference if you need it.</div>
+        </div></div>
+<div class="step"><div class="snum">9</div><div class="sbody">
+          <div class="sh">Ask for the sale</div>
+          <div class="say">"Based on everything we've gone through, do you want to get this set up?"</div>
+          <div class="cue stopcue">Stop talking. Let them answer.</div>
+        </div></div>
+<div class="step"><div class="snum">10</div><div class="sbody">
+          <div class="sh">If they say yes</div>
+          <div class="say">"Perfect. I'll send you the payment link for the AI receptionist. Once that's completed, the next step is the onboarding form so our team has everything needed to build it around your business."</div>
+          <div class="cue">Send the correct payment link from Pricing. After payment, send the onboarding form below.</div>
+          <button class="btn" data-go="pricing">Open Pricing &amp; Payment</button>
+          <a class="btn ghost" href="https://api.leadconnectorhq.com/widget/form/8Th7Cqd3SZ7szopsah2L" target="_blank" rel="noopener noreferrer">Open Onboarding Form &#8599;</a>
+        </div></div>
+<div class="step"><div class="snum">11</div><div class="sbody">
+          <div class="sh">Set onboarding expectations</div>
+          <div class="say">"Once we have the payment and onboarding form, we normally have the first version ready within about 24 hours. We'll send it over for you to test, you can tell us anything you want changed, and once you approve it we'll get you live."</div>
+          <div class="say">"At launch, we'll give you the phone number you'll use for call forwarding, and from there the AI can start handling the calls based on the setup we built."</div>
+        </div></div>
+<div class="step"><div class="snum">12</div><div class="sbody">
+          <div class="sh">If they need a follow-up</div>
+          <div class="say alt">"No problem. Let's put 15 minutes on my calendar when you have more time and we'll pick it back up there."</div>
+          <div class="cue">Schedule your own follow-up. Keep the follow-up yourself and own the close.</div>
+        </div></div></div>
+</section>
 
     <!-- ================= DISCOVERY ================= -->
-    <section class="page" id="page-discovery">
-      <div class="eyebrow">Section 06</div>
-      <h1>Discovery &amp; Value</h1>
-      <p class="lead">Do not assume the product makes sense. Find out. The best value conversation is built from numbers the owner gives you.</p>
-
-      <div class="grid g2">
-        <div class="card">
-          <h3 style="margin-top:0">The useful questions</h3>
-          <ul class="qlist">
-            <li>How many calls are usually missed or sent to voicemail?</li>
-            <li>What happens to those callers today?</li>
-            <li>Roughly what is an average new customer worth?</li>
-            <li>Who normally answers the phone?</li>
-            <li>Would you rather have the AI book directly or capture the lead for your team?</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">The mindset</h3>
-          <p>Some businesses genuinely will not have enough value in the problem to justify $397/month. That is fine.</p>
-          <p style="margin-bottom:0"><strong>Your job is to work out whether solving the problem creates enough value to make the decision obvious.</strong></p>
-        </div>
-      </div>
-
-      <h2>Revenue opportunity calculator</h2>
-      <p class="roi-intro">Use their numbers. The 20–30% recovery range is only an illustration to help discuss the opportunity; never present it as a guarantee.</p>
-      <div class="roi-card">
-        <div class="roi-head">
-          <div><span class="roi-kicker">VALUE BUILDER</span><h3>What could the missed calls be worth?</h3><p>Enter the prospect's own estimates.</p></div>
-          <div class="roi-fee"><small>AI RECEPTIONIST</small><strong>$397</strong><span>/ month</span></div>
-        </div>
-        <div class="roi-fields">
-          <label>Missed calls<input id="roi-calls" type="number" min="0" step="1" placeholder="e.g. 10"></label>
-          <label>Period<select id="roi-period"><option value="day">Per day</option><option value="week">Per week</option><option value="month">Per month</option></select></label>
-          <label>Average customer value<input id="roi-ticket" type="number" min="1" step="1" placeholder="e.g. 500"></label>
-        </div>
-        <div class="roi-output">
-          <p class="roi-prompt" id="roi-prompt">Enter missed calls and average customer value to estimate the opportunity.</p>
-          <p class="roi-error" id="roi-error" hidden>Enter valid numbers above.</p>
-          <div class="roi-primary"><span>POTENTIAL GROSS SALES / MONTH</span><strong id="roi-revenue">—</strong><small>At an illustrative 20–30% call-to-customer rate</small></div>
-          <div class="roi-results">
-            <div><span>Missed calls / month</span><strong id="roi-monthly">—</strong></div>
-            <div><span>Possible customers</span><strong id="roi-customers">—</strong></div>
-            <div><span>Gross sales vs. monthly fee</span><strong id="roi-multiple">—</strong></div>
-          </div>
-          <div class="roi-break"><span>BREAK EVEN</span><p id="roi-breakeven">—</p></div>
-        </div>
-        <div class="roi-foot">This is an illustration, not a forecast. Actual conversion, revenue, margins, and recovery rates vary by business.</div>
-      </div>
-
-      <h2>Three ways to make value clear</h2>
-      <div class="grid g3">
-        <div class="card">
-          <span class="pill green">Revenue</span>
-          <h3>What are missed opportunities worth?</h3>
-          <p style="margin-bottom:0">Use missed-call volume and average customer value to see whether even a small recovery would matter.</p>
-        </div>
-        <div class="card">
-          <span class="pill blue">Perspective</span>
-          <h3>What does the service cost in context?</h3>
-          <p style="margin-bottom:0">$397 is about $13/day for 24/7 unlimited call handling.</p>
-        </div>
-        <div class="card">
-          <span class="pill purple">Acquisition</span>
-          <h3>What could one captured customer cost?</h3>
-          <p style="margin-bottom:0">If the system helps capture 30 additional customers in a month, $397 works out to about $13 per captured customer. Compare that with what a customer is worth.</p>
-        </div>
-      </div>
-
-      <div class="say">"Based on what you told me, it sounds like the real question isn't whether the AI costs $397. It's whether capturing more of those calls is worth more than $397 to the business. Does that feel fair?"</div>
-      <div class="btnrow"><button class="btn" data-go="objections">Next: Objection Handling</button></div>
-    </section>
-
     <!-- ================= OBJECTIONS ================= -->
     <section class="page" id="page-objections">
-      <div class="eyebrow">Section 07</div>
+      <div class="eyebrow">Sales Guide</div>
       <h1>Objection Handling</h1>
       <p class="lead">Do not memorize clever rebuttals. Find out what the objection actually means, respond to that, and move the conversation back toward a decision.</p>
 
@@ -1206,57 +1160,14 @@ h3{font-size:17px;letter-spacing:-.025em}
       </div>
 
       <div class="note stop"><p style="margin-bottom:0"><strong>Know when to stop.</strong> Objection handling is for real opportunities with a solvable concern. It is not a contest to argue an uninterested person into submission.</p></div>
-      <div class="btnrow"><button class="btn" data-go="closing">Next: Close the Deal</button></div>
+      <div class="btnrow"><button class="btn ghost" data-go="scripts">Open the Full Script</button></div>
     </section>
 
     <!-- ================= CLOSING ================= -->
-    <section class="page" id="page-closing">
-      <div class="eyebrow">Section 08</div>
-      <h1>Close the Deal</h1>
-      <p class="lead">Once the problem, solution, and value are clear, ask for the business. Do not keep presenting after the prospect is ready.</p>
-
-      <h2>Use the live demo when it helps</h2>
-      <div class="card demo-card">
-        <div>
-          <span class="pill purple">Optional tool</span>
-          <h3>Let them experience the AI</h3>
-          <p>If hearing the product will make the conversation clearer, use the existing AI receptionist demo. Tell them it is a general demo, not yet their custom build.</p>
-        </div>
-        <a class="btn purple" href="https://summitresultsagency.com/ai-receptionist" target="_blank" rel="noopener noreferrer">Open Live Demo &#8599;</a>
-      </div>
-
-      <h2>The close</h2>
-      <div class="conversation-path closing-path">
-        <div class="conv-step"><span>1</span><div><strong>Confirm fit</strong><p>"Based on everything we've gone through, do you feel like this would solve the missed-call problem for you?"</p></div></div>
-        <div class="conv-step"><span>2</span><div><strong>Present the offer</strong><p>"The AI receptionist is $397 a month, unlimited call volume, and we customize the setup around your business."</p></div></div>
-        <div class="conv-step"><span>3</span><div><strong>Ask</strong><p>"Would you like to get started?"</p></div></div>
-        <div class="conv-step"><span>4</span><div><strong>Stop talking</strong><p>Let them answer. If there is an objection, handle the actual objection. If they say yes, move directly to payment.</p></div></div>
-      </div>
-
-      <h2>When they say yes</h2>
-      <div class="card">
-        <ol>
-          <li>Confirm the exact plan and monthly price.</li>
-          <li>Send the matching payment link from the Pricing page.</li>
-          <li>Have them verify the product and amount before submitting payment.</li>
-          <li>Once payment is completed, move immediately into onboarding expectations.</li>
-        </ol>
-      </div>
-
-      <div class="say alt">"Perfect. Once the payment and onboarding form are in, we'll use the business information you give us to put together the first version. We usually have that ready within about 24 hours. You'll test it, tell us if you want anything changed, and once you approve it we'll get you live."</div>
-
-      <h2>If they are interested but cannot finish now</h2>
-      <div class="grid g2">
-        <div class="card"><span class="pill blue">Default fallback</span><h3>Book yourself</h3><p style="margin-bottom:0">Schedule the continuation on your personal sales calendar. You own the deal and pick it back up where you left off.</p></div>
-        <div class="card"><span class="pill amber">Rare fallback</span><h3>Bring in the team</h3><p style="margin-bottom:0">Use a team appointment when the deal requires technical validation, special pricing approval, or a closer/manager for a specific reason.</p></div>
-      </div>
-      <div class="btnrow"><button class="btn" data-go="followup">Next: Follow-Up &amp; Appointments</button></div>
-    </section>
-
     <!-- ================= FOLLOWUP ================= -->
     <section class="page" id="page-followup">
-      <div class="eyebrow">Section 09</div>
-      <h1>Follow-Up &amp; Appointments</h1>
+      <div class="eyebrow">Sales Guide</div>
+      <h1>Follow-Up &amp; Ownership</h1>
       <p class="lead">A follow-up is not a handoff. If you schedule the next conversation, it stays your opportunity unless there is a specific reason to involve someone else.</p>
 
       <div class="grid g2">
@@ -1283,16 +1194,12 @@ h3{font-size:17px;letter-spacing:-.025em}
         <div class="checkline"><span class="checkbox"></span><span>CRM notes capture the problem, value, objections, and next step</span></div>
       </div>
 
-      <h2>Team appointments</h2>
-      <div class="note warn">
-        <p style="margin-bottom:0">Booking another closer or manager should be uncommon. Use it when the prospect needs something you cannot reasonably resolve yourself, not simply because the conversation reached the closing stage.</p>
-      </div>
       <div class="btnrow"><button class="btn" data-go="onboarding">Next: Client Onboarding</button></div>
     </section>
 
     <!-- ================= ONBOARDING ================= -->
     <section class="page" id="page-onboarding">
-      <div class="eyebrow">Section 10</div>
+      <div class="eyebrow">Sales Guide</div>
       <h1>Client Onboarding</h1>
       <p class="lead">The sale is not finished when the card goes through. Set expectations clearly so the client knows exactly what happens next.</p>
 
@@ -1342,47 +1249,21 @@ h3{font-size:17px;letter-spacing:-.025em}
     </section>
 
     <!-- ================= EXPECTATIONS ================= -->
-    <section class="page" id="page-expectations">
-      <div class="eyebrow">Section 11</div>
-      <h1>Daily Standards</h1>
-      <p class="lead">Full-cycle sales means owning activity, conversations, follow-up, and results. Do the simple things consistently.</p>
-
-      <div class="grid g3">
-        <div class="card">
-          <span class="pill blue">Create</span>
-          <h3>Generate opportunities</h3>
-          <p style="margin-bottom:0">Keep outbound activity high enough to create real conversations every day. Do not hide in research or admin work.</p>
-        </div>
-        <div class="card">
-          <span class="pill green">Advance</span>
-          <h3>Move every real deal</h3>
-          <p style="margin-bottom:0">Close now when possible. Otherwise leave every interested prospect with a specific next step and time.</p>
-        </div>
-        <div class="card">
-          <span class="pill purple">Own</span>
-          <h3>Keep the pipeline clean</h3>
-          <p style="margin-bottom:0">Update CRM notes, follow up when promised, communicate special requirements, and never let a good opportunity disappear because nobody owned it.</p>
-        </div>
-      </div>
-
-      <h2>The standard</h2>
-      <div class="card">
-        <div class="checkline"><span class="checkbox"></span><span>Professional, natural conversations</span></div>
-        <div class="checkline"><span class="checkbox"></span><span>Strong outbound activity</span></div>
-        <div class="checkline"><span class="checkbox"></span><span>Every interested prospect has a clear next step</span></div>
-        <div class="checkline"><span class="checkbox"></span><span>Appointments are on your calendar and confirmed</span></div>
-        <div class="checkline"><span class="checkbox"></span><span>CRM notes are complete enough that the deal can be understood later</span></div>
-        <div class="checkline"><span class="checkbox"></span><span>Technical promises and nonstandard pricing are approved before being committed</span></div>
-        <div class="checkline"><span class="checkbox"></span><span>Closed clients receive a clean onboarding handoff</span></div>
-      </div>
-
-      <div class="hl">
-        <div class="k">Remember</div>
-        <div class="v">The goal is not activity for activity's sake. The goal is new clients.</div>
-        <p>Use the process, stay coachable, ask for help when you need it, and keep moving opportunities forward.</p>
-      </div>
-      <div class="btnrow"><button class="btn" data-go="home">Back to Home</button></div>
-    </section>
+    <section class="page" id="page-expectations"><div class="eyebrow">Performance</div><h1>Daily Standards</h1><p class="lead">Full-cycle means you own your pipeline and your results. Consistency and communication are required, not optional.</p>
+<div class="statrow"><div class="stat"><div class="stat-v">125</div><div class="stat-l">Minimum outbound dials per working day</div></div><div class="stat"><div class="stat-v">3</div><div class="stat-l">Minimum closed sales per week</div></div><div class="stat"><div class="stat-v">Every day</div><div class="stat-l">Activity report submitted by end of each working day</div></div><div class="stat"><div class="stat-v">100%</div><div class="stat-l">CRM notes and follow-ups owned</div></div></div>
+<div class="card"><h2>Daily operating checklist</h2><ul><li>Make at least <strong>125 outbound dials</strong> during each working day.</li><li>Keep the conversation moving through discovery, live demo, price, objections, and close.</li><li>Keep every active prospect's CRM record and next step current.</li><li>Follow up on your own deals at the agreed time.</li><li>Communicate blockers or schedule changes promptly. Do not go silent.</li><li><strong>Submit the Daily Activity Form at the end of every working day.</strong> Report actual results, even when you miss the target.</li></ul><button class="btn" data-go="activity">Complete Daily Report</button></div>
+<div class="note warn"><strong>Minimum weekly result: 3 closed sales.</strong> Track your progress throughout the week. If you're behind, raise the issue early and identify what you will change.</div><button class="btn ghost" data-go="home">Back to Home</button></section>
+<section class="page" id="page-activity"><div class="eyebrow">Daily accountability</div><h1>Daily Activity Report</h1><p class="lead">Submit this at the end of <strong>every working day</strong>, even if the day fell below target. Be accurate and specific. Your daily minimum is 125 dials; your weekly minimum is 3 closed sales.</p>
+<div class="card"><form id="daily-activity-form">
+<div class="report-grid"><label>Full name <input name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Your full name"></label><label>Work date <input name="date" type="date" required></label>
+<label>Shift start <input name="shift_start" type="time" required></label><label>Shift end <input name="shift_end" type="time" required></label>
+<label>Outbound calls made <input name="calls" type="number" min="0" step="1" required placeholder="125"></label><label>Appointments booked <input name="appointments" type="number" min="0" step="1" required placeholder="0"></label><label>Sales closed <input name="sales" type="number" min="0" step="1" required placeholder="0"></label></div>
+<p class="report-help">Example shift: 9:00 AM to 5:00 PM. If your shift crosses midnight, enter the actual start and end times.</p>
+<label class="report-wide">Main objection you encountered<textarea name="main_objection" rows="3" required maxlength="2000" placeholder="What concern came up most, and how did you respond?"></textarea></label>
+<label class="report-wide">What did you do well today?<textarea name="did_well" rows="3" required maxlength="2000" placeholder="Be specific about calls, conversations, and follow-through."></textarea></label>
+<label class="report-wide">What do you want to improve?<textarea name="improve" rows="3" required maxlength="2000" placeholder="What will you do differently tomorrow?"></textarea></label>
+<div class="note"><strong>Before submitting:</strong> Check your numbers against your dialer and CRM. Submitting the form does not replace CRM updates.</div>
+<button class="btn" id="activity-submit" type="submit">Submit Daily Activity</button><p id="activity-status" role="status" aria-live="polite" class="report-status"></p></form></div></section>
     <div class="sales-modal" id="script-roi-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="script-roi-title">
       <div class="sales-modal-backdrop" data-close-script-roi></div>
       <div class="sales-modal-panel">
@@ -1428,7 +1309,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 
 <script>
 (function(){
-  var pages = ["home","start","process","product","pricing","scripts","discovery","objections","closing","followup","onboarding","expectations"];
+  var pages = ["home","start","process","product","pricing","scripts","objections","followup","onboarding","expectations","activity"];
   var sidebar = document.getElementById('sidebar');
   var scrim   = document.getElementById('scrim');
   var burger  = document.getElementById('burger');
@@ -1479,7 +1360,39 @@ h3{font-size:17px;letter-spacing:-.025em}
 
   window.addEventListener('hashchange', function(){ show((location.hash||'#home').slice(1), false); });
   window.addEventListener('popstate', function(){
-    show((location.hash||'#home').slice(1), false);
+  
+  // End-of-day activity report. URL-encoded POST avoids a cross-origin preflight.
+  var activityForm=document.getElementById('daily-activity-form');
+  if(activityForm){
+    var activityDate=activityForm.elements.namedItem('date');
+    if(activityDate&&!activityDate.value){var now=new Date();var local=new Date(now.getTime()-now.getTimezoneOffset()*60000);activityDate.value=local.toISOString().slice(0,10);}
+    activityForm.addEventListener('submit',async function(e){
+      e.preventDefault();
+      if(!activityForm.reportValidity())return;
+      var submit=document.getElementById('activity-submit'),status=document.getElementById('activity-status');
+      var start=activityForm.elements.namedItem('shift_start').value,end=activityForm.elements.namedItem('shift_end').value;
+      var formData=new FormData(activityForm);
+      var params=new URLSearchParams();
+      formData.forEach(function(value,key){params.append(key,String(value));});
+      params.append('hours_worked',start+' to '+end);
+      params.append('submitted_at',new Date().toISOString());
+      params.append('daily_dial_target','125');
+      params.append('weekly_sales_target','3');
+      submit.disabled=true;submit.textContent='Submitting…';status.textContent='Sending report…';status.className='report-status';
+      try{
+        await fetch('https://hook.us2.make.com/djxfc3u3s2tcgx5tiimv81t1uulr20mk',{method:'POST',mode:'no-cors',body:params});
+        status.textContent='Report sent. The webhook does not return a readable confirmation, so please check with your manager if you need receipt verification.';
+        status.className='report-status success';
+        activityForm.reset();
+        if(activityDate){var d=new Date();activityDate.value=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);}
+      }catch(err){
+        status.textContent='Could not send the report. Check your connection and try again. Your entries are still here.';
+        status.className='report-status error';
+      }finally{submit.disabled=false;submit.textContent='Submit Daily Activity';}
+    });
+  }
+
+  show((location.hash||'#home').slice(1), false);
   });
 
   // Script tabs
@@ -1500,14 +1413,14 @@ h3{font-size:17px;letter-spacing:-.025em}
 
   
   var scriptRoiModal=document.getElementById('script-roi-modal');
-  var openScriptRoi=document.getElementById('open-script-roi');
+  var openScriptRoi=document.querySelectorAll('.open-script-roi');
   var scriptCalls=document.getElementById('script-roi-calls');
   var scriptPeriod=document.getElementById('script-roi-period');
   var scriptTicket=document.getElementById('script-roi-ticket');
   var scriptRate=document.getElementById('script-roi-rate');
   function openScriptRoiModal(){scriptRoiModal.classList.add('open');scriptRoiModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';scriptCalls.focus();}
   function closeScriptRoiModal(){scriptRoiModal.classList.remove('open');scriptRoiModal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-  if(openScriptRoi)openScriptRoi.addEventListener('click',openScriptRoiModal);
+  openScriptRoi.forEach(function(el){el.addEventListener('click',openScriptRoiModal);});
   document.querySelectorAll('[data-close-script-roi]').forEach(function(el){el.addEventListener('click',closeScriptRoiModal);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&scriptRoiModal.classList.contains('open'))closeScriptRoiModal();});
   var scriptDollars=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
