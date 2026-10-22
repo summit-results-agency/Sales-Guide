@@ -625,6 +625,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 @media(max-width:460px){.sales-modal-fields,.modal-result-grid{grid-template-columns:1fr}.modal-result-grid>div{border-right:0!important}.modal-result-grid>div:nth-last-child(2){border-bottom:1px solid #354056!important}.modal-primary strong{font-size:36px}}
 
 .report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:14px}.report-grid label,.report-wide{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px;margin-bottom:14px}.report-grid input,.report-grid select,.report-wide textarea{border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;width:100%;background:#fff;color:var(--text)}.report-grid input:focus,.report-grid select:focus,.report-wide textarea:focus{outline:2px solid var(--blue);outline-offset:1px}.report-help{font-size:13px;color:var(--muted)}.report-status{margin-top:12px;font-weight:700}.report-status.error{color:var(--red)}.report-status.success{color:var(--green)}@media(max-width:620px){.report-grid{grid-template-columns:1fr}}
+#low-dials-reason-wrap[hidden]{display:none!important}
 </style>
 </head>
 <body>
@@ -1263,6 +1264,7 @@ h3{font-size:17px;letter-spacing:-.025em}
 <div class="report-grid"><label>Full name <input name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Your full name"></label><label>Work date <input name="date" type="date" required></label>
 <label>Shift start <select name="shift_start" required><option value="" selected disabled>Select time</option><option value="00:00">12:00 AM</option><option value="00:30">12:30 AM</option><option value="01:00">1:00 AM</option><option value="01:30">1:30 AM</option><option value="02:00">2:00 AM</option><option value="02:30">2:30 AM</option><option value="03:00">3:00 AM</option><option value="03:30">3:30 AM</option><option value="04:00">4:00 AM</option><option value="04:30">4:30 AM</option><option value="05:00">5:00 AM</option><option value="05:30">5:30 AM</option><option value="06:00">6:00 AM</option><option value="06:30">6:30 AM</option><option value="07:00">7:00 AM</option><option value="07:30">7:30 AM</option><option value="08:00">8:00 AM</option><option value="08:30">8:30 AM</option><option value="09:00">9:00 AM</option><option value="09:30">9:30 AM</option><option value="10:00">10:00 AM</option><option value="10:30">10:30 AM</option><option value="11:00">11:00 AM</option><option value="11:30">11:30 AM</option><option value="12:00">12:00 PM</option><option value="12:30">12:30 PM</option><option value="13:00">1:00 PM</option><option value="13:30">1:30 PM</option><option value="14:00">2:00 PM</option><option value="14:30">2:30 PM</option><option value="15:00">3:00 PM</option><option value="15:30">3:30 PM</option><option value="16:00">4:00 PM</option><option value="16:30">4:30 PM</option><option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option><option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option><option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option><option value="20:00">8:00 PM</option><option value="20:30">8:30 PM</option><option value="21:00">9:00 PM</option><option value="21:30">9:30 PM</option><option value="22:00">10:00 PM</option><option value="22:30">10:30 PM</option><option value="23:00">11:00 PM</option><option value="23:30">11:30 PM</option></select></label><label>Shift end <select name="shift_end" required><option value="" selected disabled>Select time</option><option value="00:00">12:00 AM</option><option value="00:30">12:30 AM</option><option value="01:00">1:00 AM</option><option value="01:30">1:30 AM</option><option value="02:00">2:00 AM</option><option value="02:30">2:30 AM</option><option value="03:00">3:00 AM</option><option value="03:30">3:30 AM</option><option value="04:00">4:00 AM</option><option value="04:30">4:30 AM</option><option value="05:00">5:00 AM</option><option value="05:30">5:30 AM</option><option value="06:00">6:00 AM</option><option value="06:30">6:30 AM</option><option value="07:00">7:00 AM</option><option value="07:30">7:30 AM</option><option value="08:00">8:00 AM</option><option value="08:30">8:30 AM</option><option value="09:00">9:00 AM</option><option value="09:30">9:30 AM</option><option value="10:00">10:00 AM</option><option value="10:30">10:30 AM</option><option value="11:00">11:00 AM</option><option value="11:30">11:30 AM</option><option value="12:00">12:00 PM</option><option value="12:30">12:30 PM</option><option value="13:00">1:00 PM</option><option value="13:30">1:30 PM</option><option value="14:00">2:00 PM</option><option value="14:30">2:30 PM</option><option value="15:00">3:00 PM</option><option value="15:30">3:30 PM</option><option value="16:00">4:00 PM</option><option value="16:30">4:30 PM</option><option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option><option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option><option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option><option value="20:00">8:00 PM</option><option value="20:30">8:30 PM</option><option value="21:00">9:00 PM</option><option value="21:30">9:30 PM</option><option value="22:00">10:00 PM</option><option value="22:30">10:30 PM</option><option value="23:00">11:00 PM</option><option value="23:30">11:30 PM</option></select></label>
 <label>Outbound calls made <input name="calls" type="number" min="0" step="1" required placeholder="125"></label><label>Appointments booked <input name="appointments" type="number" min="0" step="1" required placeholder="0"></label><label>Sales closed <input name="sales" type="number" min="0" step="1" required placeholder="0"></label></div>
+<div id="low-dials-reason-wrap" class="report-wide" hidden><label class="report-wide" for="low-dials-reason">Why did you make fewer than 125 dials today?<textarea id="low-dials-reason" name="below_target_reason" rows="3" maxlength="2000" placeholder="Explain what prevented you from reaching 125 calls."></textarea></label></div>
 <p class="report-help">If your shift crosses midnight, enter the actual start and end times.</p>
 <label class="report-wide">Main objection you encountered<textarea name="main_objection" rows="3" required maxlength="2000" placeholder="What concern came up most, and how did you respond?"></textarea></label>
 <label class="report-wide">What did you do well today?<textarea name="did_well" rows="3" required maxlength="2000" placeholder="Be specific about calls, conversations, and follow-through."></textarea></label>
@@ -1371,8 +1373,24 @@ h3{font-size:17px;letter-spacing:-.025em}
   if(activityForm){
     var activityDate=activityForm.elements.namedItem('date');
     if(activityDate&&!activityDate.value){var now=new Date();var local=new Date(now.getTime()-now.getTimezoneOffset()*60000);activityDate.value=local.toISOString().slice(0,10);}
+    var dialCount=activityForm.elements.namedItem('calls');
+    var belowTargetWrap=document.getElementById('low-dials-reason-wrap');
+    var belowTargetReason=document.getElementById('low-dials-reason');
+    function syncBelowTargetReason(){
+      var entered=dialCount.value.trim()!=='';
+      var below=entered&&dialCount.validity.valid&&Number(dialCount.value)<125;
+      belowTargetWrap.hidden=!below;
+      belowTargetReason.required=below;
+      belowTargetReason.disabled=!below;
+      if(!below)belowTargetReason.value='';
+    }
+    // Respond after entry is completed, not while each digit is typed.
+    dialCount.addEventListener('blur',syncBelowTargetReason);
+    dialCount.addEventListener('change',syncBelowTargetReason);
+    syncBelowTargetReason();
     activityForm.addEventListener('submit',async function(e){
       e.preventDefault();
+      syncBelowTargetReason();
       if(!activityForm.reportValidity())return;
       var submit=document.getElementById('activity-submit'),status=document.getElementById('activity-status');
       var start=activityForm.elements.namedItem('shift_start').value,end=activityForm.elements.namedItem('shift_end').value;
@@ -1389,6 +1407,7 @@ h3{font-size:17px;letter-spacing:-.025em}
         status.textContent='Report sent. The webhook does not return a readable confirmation, so please check with your manager if you need receipt verification.';
         status.className='report-status success';
         activityForm.reset();
+        syncBelowTargetReason();
         if(activityDate){var d=new Date();activityDate.value=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);}
       }catch(err){
         status.textContent='Could not send the report. Check your connection and try again. Your entries are still here.';
